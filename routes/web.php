@@ -22,7 +22,7 @@ Route::post('/', 'BookController@store')->name('book.store');
 // Listar o registro
 Route::get('/livro', 'BookController@index')->name('book.index');
 
-// Listar o registro
+// Editar o registro
 Route::put('/livro/{id}', 'BookController@edit')->name('book.edit');
 
 // Deletar o registro
