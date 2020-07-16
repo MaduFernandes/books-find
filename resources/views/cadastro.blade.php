@@ -1,10 +1,25 @@
 @extends('layouts.app')
 
+<style>
+    #panel{
+        background-color: #9c89b8;
+        border-radius: 5px;
+    }
+    #title{
+        color: white;
+        margin: 0;
+    }
+</style>
 @section('content')
 <div class="container">
     <div class="content">
         <div class="d-flex justify-content-cente">
             <div class="mx-auto">
+                <div class="jumbotron jumbotron-fluid" id="panel">
+                    <div class="container">
+                        <h2 class="display-4" id="title">My Book List</h2>
+                        </div>
+                    </div>
                 <div class="content-first">
                     <div class="row no-gutters bg-light position-relative">
                         <div class="col-md-6 mb-md-0 p-md-4">
