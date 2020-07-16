@@ -28,14 +28,11 @@
                         <td>{{$list->autor}}</td>
                         <td>{{$list->ano_de_publicacao}}</td>
                         <td>
-                            <form action="{{ route('book.edit', $list->id) }}" method="POST">
-                                @csrf
-                                @method('PUT')
-                                    <button type="submit" class="btn btn-warning">Editar</button>
-                            </form>
+
                             <form action="{{ route('book.destroy', $list->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
+                                    <button type="submit" class="btn btn-warning">Editar</button>
                                     <button type="submit" class="btn btn-danger">Excluir</button>
                             </form>
                         </td>
