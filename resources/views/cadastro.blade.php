@@ -19,12 +19,15 @@
     #btn {
         width: 100%;
     }
+    #mx-auto{
+        margin-top: 50px;
+    }
 </style>
 @section('content')
 <div class="container">
     <div class="content">
         <div class="d-flex justify-content-cente">
-            <div class="mx-auto">
+            <div class="mx-auto" id="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
                         <h2 class="display-4" id="title">My Book List</h2>
