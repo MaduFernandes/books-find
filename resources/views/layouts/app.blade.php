@@ -23,7 +23,8 @@
 
 <style>
     body {
-        background-color: #f0e6ef;
+        background-color: #caf0f8;
+        font-family: Arial, Helvetica, sans-serif;
     }
 </style>
 <body>
