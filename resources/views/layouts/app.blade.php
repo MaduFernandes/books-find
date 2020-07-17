@@ -20,6 +20,13 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+<style>
+    body {
+        background-color: #caf0f8;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
 <body>
         <main class="py-4">
             @yield('content')
