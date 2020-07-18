@@ -18,12 +18,22 @@
     #mx-auto{
         margin-top: 50px;
     }
-    #cancel {
+    #voltar-btn {
         width: 49%;
         float: right;
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        float:right;
+        text-align: center;
+        border-radius: .25rem;
+        padding: .375rem .75rem;
+        font-weight: bold;
+        text-decoration-line: none;
     }
     #btn{
         width: 49%;
+        font-weight: bold;
     }
 </style>
 @section('content')
@@ -57,7 +67,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input class="btn btn-primary"type="submit" value="Atualizar" id="btn">
-                                        <input class="btn btn-danger"type="submit" value="Cancelar" id="cancel">
+                                        <a href="/livro" type="btn" value="Cancelar" id="voltar-btn" onClick="history.go(-1)">Voltar</a>
                                     </div>
                                 </div>
                             </form>
@@ -67,4 +77,5 @@
         </div>
     </div>
 </div>
+
 @endsection
