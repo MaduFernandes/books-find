@@ -1,6 +1,12 @@
-# :low_brightness: Crud Laravel
+# :low_brightness: Crud Laravel - Lista de Livros
 
-Crud feito para melhor entendimento do framework, usando como banco o SQLite.
+![Captura de tela de 2020-07-18 16-08-16](https://user-images.githubusercontent.com/49164290/87860137-62f3e700-c911-11ea-85a4-220696493d1d.png)
+
+## Tecnologias
+
+- Laravel 7
+- SQLite
+- BootStrap4
 
 ## :desktop_computer: Configuração
 
