@@ -3,7 +3,6 @@
 <style>
     table {
         border-radius: 10px;
-        margin-top: 10px;
     }
     #col{
         color: #fff;
@@ -20,28 +19,25 @@
     #btn-danger{
         font-weight: bold;
     }
-    #voltar-btn {
+
+    #cadastrar{
         color: #fff;
-        background-color: black;
-        border-color: Black;
-        text-align: center;
-        border-radius: .25rem;
-        padding: .375rem .75rem;
+        background-color: #28a745;
+        border-color: #28a745;
         font-weight: bold;
-        text-decoration-line: none;
+        text-align: center;
+        padding: 6px 12px;
+        border-radius: 5px;
+        float: right;
+        margin-bottom: 10px;
     }
-    .scroll{
-        position: relative;
-        height: 800px;
-        overflow: auto;
-    }
+
 </style>
 
 @section('content')
 <div class="container">
-    <div class="table table-hover" id="table">
-        <a href="/" type="btn" value="Cancelar" id="voltar-btn" onClick="history.go(-1)">Voltar</a>
-        <div class="scroll">
+    <a  href="{{ route('book.create') }}" type="btn" value="Cadastrar" id="cadastrar">Novo</a>
+        <div class="table table-hover" id="table">
             <table class="table">
                 <thead class="thead">
                     <tr>
@@ -75,7 +71,6 @@
                 </tbody>
             </table>
         </div>
-    </div>
 </div>
 @endsection
 
