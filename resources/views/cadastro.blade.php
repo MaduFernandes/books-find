@@ -14,13 +14,26 @@
     }
 
     #btn {
-        width: 100%;
+        width: 49%;
         background-color: #0077b6;
         color: white;
         font-weight: bold;
     }
     #mx-auto{
         margin-top: 50px;
+    }
+    #cancelar-btn {
+        width: 49%;
+        float: right;
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+        float:right;
+        text-align: center;
+        border-radius: .25rem;
+        padding: .375rem .75rem;
+        font-weight: bold;
+        text-decoration-line: none;
     }
 </style>
 @section('content')
@@ -30,7 +43,7 @@
             <div class="mx-auto" id="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
-                        <h2 class="display-4" id="title">Lista de Livros</h2>
+                        <h2 class="display-4" id="title">Cadastrar Livro</h2>
                         </div>
                     </div>
                 <div class="content-first">
@@ -53,6 +66,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input class="btn"type="submit" value="Salvar" id="btn">
+                                        <a href="/" type="btn" value="Cancelar" id="cancelar-btn" onClick="history.go(-1)">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

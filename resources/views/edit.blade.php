@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input class="btn btn-primary"type="submit" value="Atualizar" id="btn">
-                                        <a href="/livro" type="btn" value="Cancelar" id="voltar-btn" onClick="history.go(-1)">Voltar</a>
+                                        <a href="/" type="btn" value="Cancelar" id="voltar-btn" onClick="history.go(-1)">Voltar</a>
                                     </div>
                                 </div>
                             </form>
