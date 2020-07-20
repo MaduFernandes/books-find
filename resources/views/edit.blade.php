@@ -52,7 +52,7 @@
                             <img src="{{ url('/undraw_Reading_book_re_kqpk.svg') }}" class="w-100" alt="...">
                         </div>
                         <div class="col-md-6 position-static p-4 pl-md-0" id="panel2">
-                            <form method="POST" action="/">
+                            <form method="POST" action={{ route('book.update', $book->getKey()) }}>
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group" id="form">
