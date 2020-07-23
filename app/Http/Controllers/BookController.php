@@ -16,7 +16,7 @@ class BookController extends Controller
 
     public function create()
     {
-        //
+        return view('cadastro');
     }
 
     public function store(Request $request) {
@@ -29,8 +29,9 @@ class BookController extends Controller
         return redirect()->route('book.index');
     }
 
-    public function show() {
-        return view('cadastro');
+    public function show($id) {
+        $book = Book::findOrFail($id);
+        return view ('show', compact('book'));
     }
 
 

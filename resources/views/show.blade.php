@@ -23,17 +23,23 @@
         margin-top: 50px;
     }
     #cancelar-btn {
-        width: 49%;
+        width: 50%;
         color: #fff;
         background-color: #dc3545;
         border-color: #dc3545;
-        float:right;
         text-align: center;
         border-radius: .25rem;
         padding: .375rem .75rem;
         font-weight: bold;
         text-decoration-line: none;
     }
+    label {
+        font-weight: bold;
+    }
+    p {
+        margin-left: 10px;
+    }
+
 </style>
 @section('content')
 <div class="container">
@@ -42,7 +48,7 @@
             <div class="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
-                        <h2 class="display-4" id="title">Cadastrar Livro</h2>
+                        <h2 class="display-4" id="title">Livro</h2>
                         </div>
                     </div>
                 <div class="content-first">
@@ -51,21 +57,23 @@
                             <img src="{{ url('/undraw_Reading_book_re_kqpk.svg') }}" class="w-100" alt="...">
                         </div>
                         <div class="col-md-6 position-static p-4 pl-md-0" id="panel2">
-                            <form method="POST" action="/">
+                            <form method="GET">
                                 @csrf
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <input class="form-control" name="nome" placeholder="Livro">
+                                    <div class="row">
+                                        <label class="form-label">Livro: </label>
+                                        <p>{{$book->nome}}</p>
                                     </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="autor" placeholder="Autor">
+                                    <div class="row">
+                                        <label class="form-label">Autor: </label>
+                                        <p>{{$book->autor}}</p>
                                     </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="ano_de_publicacao" placeholder="Ano de Publicação">
+                                    <div class="row">
+                                        <label class="form-label">Ano de Publicação: </label>
+                                        <p>{{$book->ano_de_publicacao}}</p>
                                     </div>
-                                    <div class="form-group">
-                                        <input class="btn" type="submit" value="Salvar" id="btn">
-                                        <a href="{{ URL::previous() }}" id="cancelar-btn">Cancelar</a>
+                                    <div class="row">
+                                        <a href="{{ URL::previous() }}" id="cancelar-btn" type="btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
