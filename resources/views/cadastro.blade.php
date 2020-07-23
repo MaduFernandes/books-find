@@ -19,12 +19,11 @@
         color: white;
         font-weight: bold;
     }
-    #mx-auto{
+    .mx-auto{
         margin-top: 50px;
     }
     #cancelar-btn {
         width: 49%;
-        float: right;
         color: #fff;
         background-color: #dc3545;
         border-color: #dc3545;
@@ -40,7 +39,7 @@
 <div class="container">
     <div class="content">
         <div class="d-flex justify-content-cente">
-            <div class="mx-auto" id="mx-auto">
+            <div class="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
                         <h2 class="display-4" id="title">Cadastrar Livro</h2>
@@ -54,19 +53,19 @@
                         <div class="col-md-6 position-static p-4 pl-md-0" id="panel2">
                             <form method="POST" action="/">
                                 @csrf
-                                <div class="form-group" id="form">
+                                <div class="form-group">
                                     <div class="form-group">
-                                        <input class="form-control" type="nome_livro" name="nome" placeholder="Livro">
+                                        <input class="form-control" name="nome" placeholder="Livro">
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" type="nome_autor" name="autor" placeholder="Autor">
+                                        <input class="form-control" name="autor" placeholder="Autor">
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" type="ano_publicacao" name="ano_de_publicacao" placeholder="Ano de Publicação">
+                                        <input class="form-control" name="ano_de_publicacao" placeholder="Ano de Publicação">
                                     </div>
                                     <div class="form-group">
-                                        <input class="btn"type="submit" value="Salvar" id="btn">
-                                        <a href="{{ URL::previous() }}" id="cancelar-btn"  type="btn">Cancelar</a>
+                                        <input class="btn" type="submit" value="Salvar" id="btn">
+                                        <a href="{{ URL::previous() }}" id="cancelar-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

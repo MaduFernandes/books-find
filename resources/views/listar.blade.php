@@ -16,6 +16,13 @@
         float:right;
         font-weight: bold;
     }
+    #btn-show{
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+        float:right;
+        font-weight: bold;
+    }
     #btn-danger{
         font-weight: bold;
     }
@@ -36,7 +43,7 @@
 
 @section('content')
 <div class="container">
-    <a  href="{{ route('book.create') }}" type="btn" value="Cadastrar" id="cadastrar">Novo</a>
+    <a  href="{{ route('book.create') }}" type="btn" id="cadastrar">Novo</a>
         <div class="table table-hover" id="table">
             <table class="table">
                 <thead class="thead">
@@ -45,6 +52,7 @@
                         <th scope="col" id="col">Livro</th>
                         <th scope="col" id="col">Autor</th>
                         <th scope="col" id="col">Ano</th>
+                        <th scope="col" id="col"></th>
                         <th scope="col" id="col"></th>
                         <th scope="col" id="col"></th>
                     </tr>
@@ -57,7 +65,10 @@
                             <td>{{$list->autor}}</td>
                             <td>{{$list->ano_de_publicacao}}</td>
                             <td>
-                                <a type="submit" id = "btn-a" class="btn" href="{{ route('book.edit', $list->id) }}">Editar</a>
+                                <a id = "btn-show" class="btn" href="{{ route('book.show', $list->id) }}">Visualizar</a>
+                            </td>
+                            <td>
+                                <a id = "btn-a" class="btn" href="{{ route('book.edit', $list->id) }}">Editar</a>
                             </td>
                             <td>
                                 <form action="{{ route('book.destroy', $list->id) }}" method="POST">
