@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'BookController@show')->name('book.show');
+// Listar o registro
+Route::get('/', 'BookController@index')->name('book.index');
+
+// Cadastra o registro
+Route::get('/livro', 'BookController@create')->name('book.create');
+
 // Salvar o registro
 Route::post('/', 'BookController@store')->name('book.store');
 
-// Listar o registro
-Route::get('/livro', 'BookController@index')->name('book.index');
+Route::get('/livro/{id}', 'BookController@show')->name('book.show');
 
 // Editar o registro
 Route::get('/livro/{id}', 'BookController@edit')->name('book.edit');
