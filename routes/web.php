@@ -19,15 +19,15 @@ Auth::routes();
 Route::get('/', 'BookController@index')->name('book.index');
 
 // Cadastra o registro
-Route::get('/livro', 'BookController@create')->name('book.create');
+Route::get('/livro/cadastrar', 'BookController@create')->name('book.create');
 
 // Salvar o registro
 Route::post('/', 'BookController@store')->name('book.store');
 
-Route::get('/livro/{id}', 'BookController@show')->name('book.show');
+Route::get('/livro/{id}/visualizar', 'BookController@show')->name('book.show');
 
 // Editar o registro
-Route::get('/livro/{id}', 'BookController@edit')->name('book.edit');
+Route::get('/livro/{id}/editar', 'BookController@edit')->name('book.edit');
 
 // Atualizar o registro
 Route::put('/livro/{id}', 'BookController@update')->name('book.update');
