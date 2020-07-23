@@ -18,12 +18,12 @@
     #mx-auto{
         margin-top: 50px;
     }
-    #voltar-btn {
+    #cancelar-btn {
         width: 49%;
         float: right;
         color: #fff;
-        background-color: #17a2b8;
-        border-color: #17a2b8;
+        background-color: #dc3545;
+        border-color: #dc3545;
         float:right;
         text-align: center;
         border-radius: .25rem;
@@ -36,14 +36,16 @@
         font-weight: bold;
     }
 </style>
+
 @section('content')
+
 <div class="container">
     <div class="content">
         <div class="d-flex justify-content-cente">
             <div class="mx-auto" id="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
-                        <h2 class="display-4" id="title">Atualizar Lista de Livros</h2>
+                        <h2 class="display-4" id="title">Atualizar Livros</h2>
                         </div>
                     </div>
                 <div class="content-first">
@@ -67,7 +69,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input class="btn btn-primary"type="submit" value="Atualizar" id="btn">
-                                        <a href="/" type="btn" value="Cancelar" id="voltar-btn" onClick="history.go(-1)">Voltar</a>
+                                        <a href="{{ URL::previous() }}" id="cancelar-btn"  type="btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

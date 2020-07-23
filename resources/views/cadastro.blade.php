@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input class="btn"type="submit" value="Salvar" id="btn">
-                                        <a href="/" type="btn" value="Cancelar" id="cancelar-btn" onClick="history.go(-1)">Cancelar</a>
+                                        <a href="{{ URL::previous() }}" id="cancelar-btn"  type="btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
