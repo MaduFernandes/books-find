@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreBook;
 use App\Book;
 
 class BookController extends Controller
@@ -14,12 +15,12 @@ class BookController extends Controller
     }
 
 
-    public function create()
-    {
+    public function create() {
         return view('cadastro');
     }
 
-    public function store(Request $request) {
+    public function store(StoreBook $request) {
+
         $book = new Book;
         $book->nome = $request->nome;
         $book->autor = $request->autor;
@@ -35,15 +36,13 @@ class BookController extends Controller
     }
 
 
-    public function edit($id)
-    {
+    public function edit($id) {
         $book = Book::findOrFail($id);
         return view ('edit', compact('book'));
     }
 
 
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         $book = Book::find($id);
         $book->update($request->all());
         return redirect()->route('book.index');

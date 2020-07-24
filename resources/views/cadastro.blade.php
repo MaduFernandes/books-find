@@ -42,7 +42,7 @@
             <div class="mx-auto">
                 <div class="jumbotron vertical-center" id="panel">
                     <div class="container">
-                        <h2 class="display-4" id="title">Cadastrar Livro</h2>
+                        <h2 class="display-4" id="title">{{ __('Cadastrar Livro') }}</h2>
                         </div>
                     </div>
                 <div class="content-first">
@@ -55,17 +55,47 @@
                                 @csrf
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <input class="form-control" name="nome" placeholder="Livro">
+                                        <input class="form-control" name="nome" placeholder="Livro" class="@error('nome') is-invalid @enderror">
+                                        
+                                        @error('nome')
+                                            <div class="alert alert-danger alert-dismissible fade show">
+                                                {{ $message }}
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        @enderror
+
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="autor" placeholder="Autor">
+                                        <input class="form-control" name="autor" placeholder="Autor" class="@error('autor') is-invalid @enderror">
+                                        
+                                        @error('autor')
+                                        <div class="alert alert-danger alert-dismissible fade show">
+                                            {{ $message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        @enderror
+
                                     </div>
                                     <div class="form-group">
-                                        <input class="form-control" name="ano_de_publicacao" placeholder="Ano de Publicação">
+                                        <input class="form-control" name="ano_de_publicacao" placeholder="Ano de Publicação" class="@error('ano_de_publicacao') is-invalid @enderror">
+                                        
+                                        @error('ano_de_publicacao')
+                                        <div class="alert alert-danger alert-dismissible fade show">
+                                            {{ $message }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        @enderror
+
                                     </div>
                                     <div class="form-group">
-                                        <input class="btn" type="submit" value="Salvar" id="btn">
-                                        <a href="{{ URL::previous() }}" id="cancelar-btn">Cancelar</a>
+                                        <input type="submit" value="Salvar" id="btn" class="btn">
+                                        <a href="{{ URL::previous() }}" id="cancelar-btn" type="btn">{{ __('Cancelar') }}</a>
                                     </div>
                                 </div>
                             </form>
