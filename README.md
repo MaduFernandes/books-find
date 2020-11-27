@@ -1,9 +1,3 @@
-# :low_brightness: Crud Laravel - Lista de Livros
-
-![Captura de tela de 2020-07-23 16-49-36](https://user-images.githubusercontent.com/49164290/88332450-f60f9100-cd04-11ea-8325-5f8be4fae9d6.png)
-
-![Captura de tela de 2020-07-23 16-53-06](https://user-images.githubusercontent.com/49164290/88332515-12133280-cd05-11ea-98b7-9abf64610858.png)
-
 ## Tecnologias
 
 - Laravel 7
