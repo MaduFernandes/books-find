@@ -37,11 +37,6 @@
             <li><a href="#">Ficção Cientifica</a></li>
         </ul>
 
-        <div class="search">
-            <input type="text" placeholder="Buscar">
-            <i class="fas fa-search"></i>
-        </div>
-
         <ul class="menu">
             <li><a href="{{ route('login') }}">Login</a></li>
         </ul>
