@@ -1,8 +1,13 @@
-body {
+body, .content {
     margin: 0px;
     padding: 0px;
     font-family: poppings;
     background-color: rgba(151, 151, 151, 0.03);
+    background-color: #ffffff;
+    height: 100vh;
+    display:flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 * {
@@ -22,11 +27,11 @@ nav{
     justify-content:space-around;
     align-items: center;
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
     position: relative;
     top: 0;
     z-index: 100;
+    height: 110px;
 }
 
 .logo img {
@@ -52,20 +57,48 @@ nav .menu li a{
 
 
 nav .menu li a:hover{
-    background-color: #242424;
+    background-color: #445A70;
     color: #ffffff;
     transition: all ease 0.2s;
 }
 
-#main, #cadastro {
-    padding-top:80px;
-    background-color:#ffffff;
+#main, footer {
+    padding-top:10px;
+    background-color:#445A70;
 }
 
-.show-box {
-    width: 184px;
-    box-shadow: 5px 35px 31px rgba(0,0,0,0.3);
-    border-radius:10px;
+.card-group {
+    width: 240px;
     margin: 0px 20px 10px 20px;
     overflow: hidden;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+h1 {
+    color: #ffff;
+    line-height: 1.5;
+}
+
+section {
+    height: 480px;
+}
+
+#copyright {
+    color: #ffff;
+}
+
+#copyright a{
+    color: #ffff;
+}
+
+.img {
+    width: 100%;
+    height: min-content;
+}
+
+#search {
+    margin: 50px;
+    width: 80%;
+    padding: 100px;
 }

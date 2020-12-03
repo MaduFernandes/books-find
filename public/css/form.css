@@ -52,8 +52,9 @@
     align-items: center;
 }
 
-.btn{
+#btn{
     background-color:#445A70;
     color: #ffff;
     font-weight: bolder;
+    border-radius: 15px;
 }
