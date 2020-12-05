@@ -12,6 +12,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -25,22 +28,8 @@
 
 <body>
     <div class="content">
-    <nav>
-        <a href="#" class="logo">
-            <img src="{{url('/logo/logo2.jpg')}}" id="logo" alt="logo">
-        </a>
 
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Romance</a></li>
-            <li><a href="#">Terror</a></li>
-            <li><a href="#">Ficção Cientifica</a></li>
-        </ul>
-
-        <ul class="menu">
-            <li><a href="{{ route('login') }}">Login</a></li>
-        </ul>
-    </nav>
+    @include('layouts.navbar')
 
     <section id="main">
         <h1>Livros</h1>
@@ -59,16 +48,16 @@
     </section>
 
     <div class="content">
-        <div class="col-md-6 position-static p-4 pl-md-0">
+        <div class="col-md-6 p-4 pl-md-0" id="search">
             <form method="POST" action="{{ route('book.search') }}">
                 @csrf
 
                     <div class="form-group">
-                        <input class="form" name="search" placeholder="Livro" class="@error('nome') is-invalid @enderror">
+                        <input class="form" name="search" placeholder="Buscar:">
                     </div>
 
                     <div class="form col">
-                        <input type="submit" value="Buscar" id="btn" class="btn">
+                        <input type="submit" value="Pesquisar" id="btn" class="btn">
                     </div>
                 </div>
             </form>
