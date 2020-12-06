@@ -15,24 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-// Listar o registro
-Route::get('/', 'BookController@index')->name('book.index');
+// Cliente
+Route::get('/', 'BookController@index')->name('client.index');
+Route::any('/search', 'BookController@search')->name('book.search');
 
-// Cadastra o registro
-Route::get('/livro/cadastrar', 'BookController@create')->name('book.create');
+// Login
+Route::get('/login', 'Auth\LoginController@index')->name('login');
+Route::post('/', 'Auth\LoginController@login')->name('login.conta');
+Route::get('/login/sair', 'Auth\LoginController@logout')->name('logout');
 
-// Salvar o registro
-Route::post('/', 'BookController@store')->name('book.store');
-
-Route::get('/livro/{id}/visualizar', 'BookController@show')->name('book.show');
-
-// Editar o registro
-Route::get('/livro/{id}/editar', 'BookController@edit')->name('book.edit');
-
-// Atualizar o registro
-Route::put('/livro/{id}', 'BookController@update')->name('book.update');
-
-// Deletar o registro
-Route::delete('/livro/{id}', 'BookController@destroy')->name('book.destroy');
-
-
+// MIDDLEWARE - ADMIN
+Route::group(['middleware' => 'auth'], function (){
+    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    Route::get('/admin/create', 'AdminController@create')->name('admin.create');
+    Route::get('/admin/{id}/livro', 'AdminController@show')->name('admin.show');
+    Route::get('/admin/{id}', 'AdminController@edit')->name('admin.edit');
+    Route::put('/admin/{id}', 'AdminController@update')->name('admin.update');
+    Route::post('/admin', 'AdminController@store')->name('admin.store');
+    Route::delete('/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
+});
