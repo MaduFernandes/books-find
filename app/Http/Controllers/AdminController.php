@@ -42,7 +42,7 @@ class AdminController extends Controller
 
     public function edit($id) {
         $book = Book::findOrFail($id);
-        return view ('edit', compact('book'));
+        return view ('layouts.admin.admin-edit', compact('book'));
     }
 
 
