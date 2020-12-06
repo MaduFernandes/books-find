@@ -36,7 +36,7 @@ class AdminController extends Controller
 
     public function show($id) {
         $book = Book::findOrFail($id);
-        return view ('show', compact('book'));
+        return view ('layouts.admin.admin-show', compact('book'));
     }
 
 
