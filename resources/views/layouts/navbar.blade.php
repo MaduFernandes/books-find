@@ -1,6 +1,6 @@
 <nav>
     @guest
-    <a href="#" class="logo">
+    <a href="{{ route('client.index') }}" class="logo">
         <img src="{{url('/logo/logo2.jpg')}}" id="logo" alt="logo">
     </a>
 

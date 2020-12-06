@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 <nav>
-    <a href="#" class="logo">
+    <a href="{{ route('admin.index') }}" class="logo">
         <img src="{{url('/logo/logo2.jpg')}}" id="logo" alt="logo">
     </a>
 
