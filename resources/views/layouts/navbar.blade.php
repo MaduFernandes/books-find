@@ -15,6 +15,9 @@
     @endguest
 
     @auth
+    <a href="#" class="logo">
+        <img src="{{url('/logo/logo2.jpg')}}" id="logo" alt="logo">
+    </a>
     <ul class="menu">
         <li><a>Olá {{Auth::user()->name}}</a></li>
 

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Crud Laravel') }}</title>
+    <title>{{ config('app.name', 'Books Find ') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,16 +19,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 </head>
 
 <style>
     body {
-        background-color: #caf0f8;
+        background-color: #445A70;
         font-family: Arial, Helvetica, sans-serif;
     }
 </style>
 <body>
         <main class="py-4">
+            @yield('register')
             @yield('content')
         </main>
     </div>
