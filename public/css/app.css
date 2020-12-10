@@ -1,0 +1,119 @@
+body {
+    background-color: #f5f8ff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    height:100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.btn-primary {
+    color: #fff;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+
+.modals {
+    margin-top: 50px;
+}
+
+nav ul li {
+    width: 387px;
+    height: 40px;
+    display: inline;
+    top: 40px;
+    left: 30px;
+    z-index: 3;
+    position: relative !important;
+}
+
+h3 {
+    color: #fff;
+    margin-top:20px;
+    margin-left: 40px;
+}
+
+#logo {
+    width: 130px;
+}
+
+#create {
+    width: -webkit-fill-available;
+    background: #ffff;
+}
+
+#ano{
+    width: 200px;
+}
+
+#search {
+    margin-bottom: 10px;
+}
+
+#btn-search {
+    background-color: #0979fa;
+    color: #fff;
+}
+
+#form {
+    background-color: #ffff;
+}
+
+.list{
+    font-weight: 600;
+    color: #4273fa;
+    padding: 0.20rem;
+    margin-top: 13px;
+}
+
+.form-inline, h5 {
+    font-weight: 600;
+    color: #4273fa;
+    padding: 0.20rem;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.card-header{
+    background-color: #fff;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#sucess {
+    float: right;
+    margin-top: -50px;
+}
+
+#buttons {
+    margin-left: 367px;
+}
+
+#btn-edit {
+    margin-top: 10px;
+    margin-left: 325px;
+}
+
+.show {
+    margin-top: 8px;
+}
+
+.btn-warning {
+    margin-left: 295px;
+    margin-top: 30px;
+}
