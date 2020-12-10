@@ -11,34 +11,34 @@ class BookController extends Controller
 
     public function index() {
         $book = Book::all();
-        return view ('listar', compact('book'));
+        return view ('crud.index', compact('book'));
     }
 
 
     public function create() {
-        return view('cadastro');
+        return view('crud.create');
     }
 
-    public function store(StoreBook $request) {
+    public function store(Request $request) {
 
         $book = new Book;
         $book->nome = $request->nome;
         $book->autor = $request->autor;
         $book->ano_de_publicacao = $request->ano_de_publicacao;
-        $book->save();       
+        $book->save();
 
         return redirect()->route('book.index');
     }
 
     public function show($id) {
         $book = Book::findOrFail($id);
-        return view ('show', compact('book'));
+        return view ('crud.show', compact('book'));
     }
 
 
     public function edit($id) {
         $book = Book::findOrFail($id);
-        return view ('edit', compact('book'));
+        return view ('crud.edit', compact('book'));
     }
 
 
@@ -46,7 +46,7 @@ class BookController extends Controller
         $book = Book::find($id);
         $book->update($request->all());
         return redirect()->route('book.index');
-        
+
     }
 
     public function destroy($id) {
