@@ -40,23 +40,5 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function index()
-    {
-        return view('auth.login');
-    }
-
-    public function login(Request $request)
-    {
-        $dados = $request->all();
-
-        if (Auth::attempt(['email' => $dados['email'], 'password' => $dados['password']])) {
-            return redirect()->route('admin.index');
-        }
-    }
-
-    public function logout()
-    {
-        Auth::logout();
-        return redirect()->route('client.index');
-    }
-}
+    public function index() {
+        return view ('auth.login');

@@ -1,11 +1,7 @@
+<footer class="page-footer font-small pt-4" style="padding-top:10px;">
+    <div class="container">
+        <ul class="list-unstyled list-inline text-center">
 
-
-
-
-
-<footer class="page-footer font-small special-color-dark pt-4">
-        <div class="container">
-            <ul class="list-unstyled list-inline text-center">
             <li class="list-inline-item">
                 <a class="btn-floating btn-fb mx-1">
                 <i class="fab fa-facebook-f"> </i>
@@ -31,10 +27,9 @@
                 <i class="fab fa-dribbble"> </i>
                 </a>
             </li>
-            </ul>
-        </div>
-        <div class="footer-copyright text-center py-3" id="copyright">© 2020 Copyright:
-            <a href="https://https://www.unidesc.edu.br/"> Unidesc.edu.br</a>
-        </div>
-        </footer>
+        </ul>
     </div>
+    <div class="footer-copyright text-center py-3" id="copyright">© 2020 Copyright:
+        <a href="https://https://www.unidesc.edu.br/"> Unidesc.edu.br</a>
+    </div>
+</footer>

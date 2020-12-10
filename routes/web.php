@@ -15,22 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-// Cliente
-Route::get('/', 'BookController@index')->name('client.index');
-Route::any('/search', 'BookController@search')->name('book.search');
+//Login
+Route::view('/', 'auth/login');
 
-// Login
-Route::get('/login', 'Auth\LoginController@index')->name('login');
-Route::post('/', 'Auth\LoginController@login')->name('login.conta');
-Route::get('/login/sair', 'Auth\LoginController@logout')->name('logout');
-
-// MIDDLEWARE - ADMIN
 Route::group(['middleware' => 'auth'], function (){
-    Route::get('/admin', 'AdminController@index')->name('admin.index');
-    Route::get('/admin/create', 'AdminController@create')->name('admin.create');
-    Route::get('/admin/{id}/livro', 'AdminController@show')->name('admin.show');
-    Route::get('/admin/{id}', 'AdminController@edit')->name('admin.edit');
-    Route::put('/admin/{id}', 'AdminController@update')->name('admin.update');
-    Route::post('/admin', 'AdminController@store')->name('admin.store');
-    Route::delete('/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
+Route::get('/admin', 'BookController@index')->name('book.index');
+Route::get('/admin/create', 'BookController@create')->name('book.create');
+Route::post('/admin', 'BookController@store')->name('book.store');
+Route::get('/admin/{id}/show', 'BookController@show')->name('book.show');
+Route::get('/admin/{id}/edit', 'BookController@edit')->name('book.edit');
+Route::put('/admin/{id}', 'BookController@update')->name('book.update');
+Route::delete('/admin/{id}', 'BookController@destroy')->name('book.destroy');
 });
