@@ -1,36 +1,34 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Crud Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-
-<style>
-    body {
-        background-color: #caf0f8;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-</style>
+@include('layouts.head')
 <body>
-        <main class="py-4">
-            @yield('content')
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="{{ route('book.index') }}">
+                <img src="{{url('/img/book/logo.jpg')}}" id="logo" alt="logo">
+            </a>
+             <form class="form-inline">
+                <p>Olá, Admin</p>
+            </form>
+        </nav>
+    </header>
+
+    <div class="body">
+        <main class="main">
+            <div id="app" class="container">
+                <div class="modals">
+                    <div class="row">
+                        <div class="col">
+                            @yield('index')
+                            @yield('create')
+                            @yield('edit')
+                            @yield('show')
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+    @include('layouts.footer')
 </body>
 </html>
